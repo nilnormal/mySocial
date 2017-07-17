@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>97828681547-k30gpsf5m3rh6dndehu4j4nr3hjnjc8t.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.97828681547-k30gpsf5m3rh6dndehu4j4nr3hjnjc8t</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAQO7C46CR_9rGoaOfZHw71AeTl-dFBGi4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>97828681547</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.xannas.devslopes-social</string>
+	<key>PROJECT_ID</key>
+	<string>devslopes-social-cdfc5</string>
+	<key>STORAGE_BUCKET</key>
+	<string>devslopes-social-cdfc5.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:97828681547:ios:1bb8f39196f56115</string>
+	<key>DATABASE_URL</key>
+	<string>https://devslopes-social-cdfc5.firebaseio.com</string>
+</dict>
+</plist>
