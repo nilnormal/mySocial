@@ -22,6 +22,7 @@
 		81CE923A1F1DC2F6006DB855 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CE92391F1DC2F6006DB855 /* CircleView.swift */; };
 		81CE923C1F1DDD8F006DB855 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CE923B1F1DDD8F006DB855 /* PostCell.swift */; };
 		81CE923F1F1DE612006DB855 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CE923E1F1DE612006DB855 /* DataService.swift */; };
+		81CE92411F1DF98F006DB855 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CE92401F1DF98F006DB855 /* Post.swift */; };
 		DCF3FD3B3D823CCAFCD45B0E /* Pods_devslopes_social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E11EF37900D255CE1DD2B7 /* Pods_devslopes_social.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		81CE92391F1DC2F6006DB855 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		81CE923B1F1DDD8F006DB855 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		81CE923E1F1DE612006DB855 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		81CE92401F1DF98F006DB855 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		B7E11EF37900D255CE1DD2B7 /* Pods_devslopes_social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_devslopes_social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF9DEAE23E8FDD121D759EBD /* Pods-devslopes-social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-devslopes-social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-devslopes-social/Pods-devslopes-social.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +119,7 @@
 		8168BEDC1F1C7B25009331B2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				81CE92401F1DF98F006DB855 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				81CE923A1F1DC2F6006DB855 /* CircleView.swift in Sources */,
 				8168BEE61F1CAD4A009331B2 /* FancyField.swift in Sources */,
 				8168BECA1F1C7814009331B2 /* SignInVC.swift in Sources */,
+				81CE92411F1DF98F006DB855 /* Post.swift in Sources */,
 				8168BEE41F1CAB31009331B2 /* RoundBtn.swift in Sources */,
 				8168BEC81F1C7814009331B2 /* AppDelegate.swift in Sources */,
 				81CE923F1F1DE612006DB855 /* DataService.swift in Sources */,
