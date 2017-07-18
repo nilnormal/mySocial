@@ -19,7 +19,13 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.dataSource = self
     }
     
-    @IBAction func signOutBtnPressed(_ sender: UIButton) {
+    @IBAction func signOutPressed(_ sender: Any) {
+        let keychainResult = KeychainWrapper.standard.removeObject(forKey: KEY_UID)
+        print("ID remove from keychain -\(keychainResult)")
+        try! Auth.auth().signOut()
+        performSegue(withIdentifier: "goToSignIn", sender: nil)
+    }
+    @IBAction func signOutBtnPressed(_ sender: Any) {
         let keychainResult = KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         print("ID remove from keychain -\(keychainResult)")
         try! Auth.auth().signOut()

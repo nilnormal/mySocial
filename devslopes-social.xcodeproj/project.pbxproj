@@ -21,6 +21,7 @@
 		81CE92381F1DB2A0006DB855 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CE92371F1DB2A0006DB855 /* FeedVC.swift */; };
 		81CE923A1F1DC2F6006DB855 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CE92391F1DC2F6006DB855 /* CircleView.swift */; };
 		81CE923C1F1DDD8F006DB855 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CE923B1F1DDD8F006DB855 /* PostCell.swift */; };
+		81CE923F1F1DE612006DB855 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CE923E1F1DE612006DB855 /* DataService.swift */; };
 		DCF3FD3B3D823CCAFCD45B0E /* Pods_devslopes_social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E11EF37900D255CE1DD2B7 /* Pods_devslopes_social.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		81CE92371F1DB2A0006DB855 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		81CE92391F1DC2F6006DB855 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		81CE923B1F1DDD8F006DB855 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		81CE923E1F1DE612006DB855 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		B7E11EF37900D255CE1DD2B7 /* Pods_devslopes_social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_devslopes_social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF9DEAE23E8FDD121D759EBD /* Pods-devslopes-social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-devslopes-social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-devslopes-social/Pods-devslopes-social.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +90,7 @@
 		8168BEC61F1C7814009331B2 /* devslopes-social */ = {
 			isa = PBXGroup;
 			children = (
+				81CE923D1F1DE5F2006DB855 /* Services */,
 				8168BEE01F1CA796009331B2 /* Util */,
 				8168BEDC1F1C7B25009331B2 /* Model */,
 				8168BEDD1F1C7B2C009331B2 /* View */,
@@ -137,6 +140,14 @@
 				8168BEE11F1CA7B9009331B2 /* Constants.swift */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		81CE923D1F1DE5F2006DB855 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				81CE923E1F1DE612006DB855 /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		E9A4C6D337E58ADF86643B76 /* Frameworks */ = {
@@ -276,6 +287,7 @@
 				8168BECA1F1C7814009331B2 /* SignInVC.swift in Sources */,
 				8168BEE41F1CAB31009331B2 /* RoundBtn.swift in Sources */,
 				8168BEC81F1C7814009331B2 /* AppDelegate.swift in Sources */,
+				81CE923F1F1DE612006DB855 /* DataService.swift in Sources */,
 				81CE92381F1DB2A0006DB855 /* FeedVC.swift in Sources */,
 				8168BEDF1F1CA743009331B2 /* FancyView.swift in Sources */,
 				8168BEE21F1CA7B9009331B2 /* Constants.swift in Sources */,

@@ -149,27 +149,31 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZmZ-bs-wCu" customClass="FancyView" customModule="devslopes_social" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="qZ3-Iw-m1l">
-                                        <rect key="frame" x="16" y="20" width="45" height="38"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="38" id="Cb1-Oc-lNB"/>
-                                            <constraint firstAttribute="width" constant="45" id="e60-Y8-sbt"/>
-                                        </constraints>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eib-v1-3ie">
-                                        <rect key="frame" x="158" y="21" width="59.5" height="36"/>
+                                        <rect key="frame" x="158" y="20.5" width="59.5" height="36"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="26"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDS-Mc-H1P" customClass="RoundBtn" customModule="devslopes_social" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="21" width="50" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="9uJ-Fx-PKF"/>
+                                            <constraint firstAttribute="height" constant="37" id="ceZ-6C-naF"/>
+                                        </constraints>
+                                        <state key="normal" image="sign-out"/>
+                                        <connections>
+                                            <action selector="signOutPressed:" destination="G48-Xh-G9P" eventType="touchUpInside" id="zst-dZ-b4S"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="qZ3-Iw-m1l" firstAttribute="top" secondItem="ZmZ-bs-wCu" secondAttribute="top" constant="20" id="2Er-Hh-nSH"/>
                                     <constraint firstItem="eib-v1-3ie" firstAttribute="centerX" secondItem="ZmZ-bs-wCu" secondAttribute="centerX" id="87U-qs-kx9"/>
                                     <constraint firstAttribute="height" constant="65" id="Ex0-eE-c2U"/>
-                                    <constraint firstItem="eib-v1-3ie" firstAttribute="centerY" secondItem="qZ3-Iw-m1l" secondAttribute="centerY" id="X0H-2C-Vnf"/>
-                                    <constraint firstItem="qZ3-Iw-m1l" firstAttribute="leading" secondItem="ZmZ-bs-wCu" secondAttribute="leading" constant="16" id="cnR-2A-PTj"/>
+                                    <constraint firstItem="eib-v1-3ie" firstAttribute="centerY" secondItem="LDS-Mc-H1P" secondAttribute="centerY" constant="-1" id="FDK-MH-W2J"/>
+                                    <constraint firstItem="LDS-Mc-H1P" firstAttribute="top" secondItem="ZmZ-bs-wCu" secondAttribute="top" constant="21" id="S5E-Vc-Eo9"/>
+                                    <constraint firstItem="LDS-Mc-H1P" firstAttribute="leading" secondItem="ZmZ-bs-wCu" secondAttribute="leading" constant="16" id="nbF-QL-Uq9"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uL3-C9-XLV" customClass="FancyView" customModule="devslopes_social" customModuleProvider="target">
