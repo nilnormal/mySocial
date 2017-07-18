@@ -16,4 +16,5 @@ target 'devslopes-social' do
   pod 'FBSDKCoreKit', '~> 4.22.1'
   pod 'FBSDKLoginKit', '~> 4.22.1'
   pod 'FBSDKShareKit', '~> 4.22.1'
+  pod 'SwiftKeychainWrapper'
 end
