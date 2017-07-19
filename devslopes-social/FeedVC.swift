@@ -13,10 +13,12 @@ import Firebase
 class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageAdd: CircleView!
+    @IBOutlet weak var captionField: FancyField!
     
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
     static var imageCache: NSCache<NSString,UIImage> = NSCache()
+    var imageSelected = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,13 +51,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         try! Auth.auth().signOut()
         performSegue(withIdentifier: "goToSignIn", sender: nil)
     }
-    @IBAction func signOutBtnPressed(_ sender: Any) {
-        let keychainResult = KeychainWrapper.standard.removeObject(forKey: KEY_UID)
-        print("ID remove from keychain -\(keychainResult)")
-        try! Auth.auth().signOut()
-        performSegue(withIdentifier: "goToSignIn", sender: nil)
-    }
-    
+       
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -84,6 +80,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage{
             imageAdd.image = image
+            imageSelected = true
         }else{
             print("A valid image wasn't selected")
         }
@@ -95,4 +92,30 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         present(imagePicker, animated: true, completion: nil)
     }
 
+    @IBAction func postBtnPressed(_ sender: Any) {
+        guard let caption = captionField.text, caption != "" else{
+            print("Caption must be entered")
+            return
+        }
+        guard let img = imageAdd.image, imageSelected else {
+            print("An image must be selected")
+            return
+        }
+        if let imgData = UIImageJPEGRepresentation(img, 0.2){
+            let imgUid = NSUUID().uuidString
+            let metaData = StorageMetadata()
+            metaData.contentType = "image/jpg"
+            
+            DataService.ds.REF_POSTS_IMAGES.child(imgUid).putData(imgData, metadata: metaData) {(metadata, error) in
+                if error != nil{
+                    print("Unable to upload image to Firebase storage")
+                }else{
+                    print("Successfully uploaded image to Firebase storage")
+                    let downloadURL = metaData.downloadURL()?.absoluteString
+                }
+                
+            }
+        }
+    }
+    
 }
