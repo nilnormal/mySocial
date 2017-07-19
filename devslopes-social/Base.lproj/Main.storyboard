@@ -182,7 +182,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xjO-79-Kdk">
                                         <rect key="frame" x="8" y="8" width="295" height="49"/>
                                         <subviews>
-                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="e7l-Ws-Jdb" customClass="CircleView" customModule="devslopes_social" customModuleProvider="target">
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="e7l-Ws-Jdb" customClass="CircleView" customModule="devslopes_social" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
                                                 <color key="backgroundColor" red="0.0" green="0.51372549020000002" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <gestureRecognizers/>
@@ -319,6 +319,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="caption" destination="gdm-TM-ZNU" id="qoH-1g-cLl"/>
+                                            <outlet property="likeImg" destination="jMT-Wx-4y0" id="B5K-NR-bXJ"/>
                                             <outlet property="likeLbl" destination="K7L-lj-QXZ" id="gUz-a9-fvK"/>
                                             <outlet property="postImg" destination="214-nF-z28" id="TIq-58-15u"/>
                                             <outlet property="profileImg" destination="qZp-Ry-Mod" id="KQv-wU-GwR"/>
