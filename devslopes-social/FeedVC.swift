@@ -32,6 +32,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
             if let snapshots = snapshot.children.allObjects as? [DataSnapshot]{
+                self.posts = []
                 for snap in snapshots{
                     //print("SNAP: \(snap)")
                     if let postDict = snap.value as? Dictionary<String,Any>{
@@ -105,17 +106,38 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             let imgUid = NSUUID().uuidString
             let metaData = StorageMetadata()
             metaData.contentType = "image/jpg"
-            
-            DataService.ds.REF_POSTS_IMAGES.child(imgUid).putData(imgData, metadata: metaData) {(metadata, error) in
+            DataService.ds.REF_POSTS_IMAGES.child(imgUid).putData(imgData, metadata: metaData, completion: { (result, error) in
                 if error != nil{
                     print("Unable to upload image to Firebase storage")
                 }else{
                     print("Successfully uploaded image to Firebase storage")
-                    let downloadURL = metaData.downloadURL()?.absoluteString
+                    let downloadURL = result?.downloadURL()?.absoluteString
+                    print("\(downloadURL)")
+                    if let url = downloadURL{
+                        self.postToFirebase(imgUrl: url)
+                    }
+                    
                 }
-                
-            }
+
+            })
         }
+    }
+    
+    func postToFirebase(imgUrl: String){
+        let post: Dictionary<String,Any> = [
+        "caption": captionField.text,
+        "imageUrl" : imgUrl,
+        "likes" : 0
+        ]
+        
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
+        
+        captionField.text = ""
+        imageSelected = false
+        imageAdd.image = UIImage(named: "add-image")
+        
+        tableView.reloadData()
     }
     
 }
