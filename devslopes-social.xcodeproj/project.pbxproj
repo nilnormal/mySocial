@@ -196,6 +196,7 @@
 				TargetAttributes = {
 					8168BEC31F1C7814009331B2 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = NS3P6DQU5Z;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -422,7 +423,9 @@
 			baseConfigurationReference = FF9DEAE23E8FDD121D759EBD /* Pods-devslopes-social.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NS3P6DQU5Z;
 				INFOPLIST_FILE = "devslopes-social/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xannas.devslopes-social";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -435,7 +438,9 @@
 			baseConfigurationReference = 70F97378741B7254F0675847 /* Pods-devslopes-social.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NS3P6DQU5Z;
 				INFOPLIST_FILE = "devslopes-social/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xannas.devslopes-social";
 				PRODUCT_NAME = "$(TARGET_NAME)";
